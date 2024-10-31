@@ -1,10 +1,15 @@
-import { Rubik_Wet_Paint } from "next/font/google";
+import { Silkscreen } from "next/font/google";
 import "./globals.css";
 
-const rubikwp = Rubik_Wet_Paint({
+// components
+import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
+import StairTransition from "@/components/StairTransition";
+
+const silkscreen = Silkscreen({
   subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-rubikwp"
+  weight: ["400", "700"],
+  variable: "--font-silkscreen"
 })
 
 export const metadata = {
@@ -15,9 +20,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={rubikwp.variable}>
-        {children}
+      <body className={silkscreen.variable}>
+          <Header />
+          <StairTransition />
+          <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

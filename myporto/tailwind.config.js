@@ -1,3 +1,5 @@
+const { DEFAULT_RUNTIME_WEBPACK } = require('next/dist/shared/lib/constants');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
@@ -18,12 +20,15 @@ module.exports = {
 		xl:"1200px",
 	},
 	fontFamily: {
-		primary: "var(--font-rubikwp)",
+		primary: "var(--font-silkscreen)",
 	},
   	extend: {
   		colors: {
-  			background: 'var(--background)',
-  			foreground: 'var(--foreground)'
+  			primary: "#1c1c22",
+			accent: {
+				DEFAULT: "#00ff99",
+				hover: "#00e187",
+			}
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
