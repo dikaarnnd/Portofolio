@@ -16,7 +16,7 @@ const Home = () => {
             </p>
           </div>
           {/* photo */}
-          <div>foto</div>
+          <div>fotooo</div>
         </div>
       </div>
     </section>
