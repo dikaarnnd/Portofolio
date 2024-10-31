@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 
-import { Silkscreen } from "next/font/google";
+import { Silkscreen, Chakra_Petch } from "next/font/google";
 import "./globals.css";
 
 // components
@@ -13,6 +13,11 @@ const silkscreen = Silkscreen({
   weight: ["400", "700"],
   variable: "--font-silkscreen"
 })
+const chakra = Chakra_Petch({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-chakra"
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -22,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={silkscreen.variable}>
+      <body className={chakra.variable}>
           <Header />
           <StairTransition />
           <PageTransition>{children}</PageTransition>
